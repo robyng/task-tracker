@@ -2,15 +2,14 @@
 var tasksToDoEl = document.querySelector("#tasks-to-do");
 var buttonEl = document.querySelector("#save-task");
 
+buttonEl.addEventListener("click", function() {
+   var taskItemEl = document.createElement("li");
+   taskItemEl.className = "task-item";
+   taskItemEl.textContent = "this is new task";
+   taskItemEl;
+   tasksToDoEl.appendChild(taskItemEl);
 
-var createTaskHandler = function() {
-    buttonEl.addEventListener("click", function() {
-        var taskItemEl = document.createElement("li");
-        taskItemEl.className = "task-item";
-        taskItemEl.textContent = "this is new task";
-        taskItemEl;
-        tasksToDoEl.appendChild(taskItemEl);
-     })
-}
+   console.log(taskItemEl)
 
-buttonEl.addEventListener("click", createTaskHandler)
+})
+
