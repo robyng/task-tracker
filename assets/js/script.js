@@ -6,6 +6,7 @@ var tasksToDoEl = document.querySelector("#tasks-to-do");
    listItemEl.className = "task-item";
    listItemEl.textContent = "this is new task";
    tasksToDoEl.appendChild(listItemEl);
+   console.log(createTaskHandler)
  };
 
 buttonEl.addEventListener("click", createTaskHandler)
