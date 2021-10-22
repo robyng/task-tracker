@@ -9,15 +9,21 @@ var tasksToDoEl = document.querySelector("#tasks-to-do");
     var taskTypeInput = document.querySelector("select[name='task-type']").value;
     var taskNameInput = document.querySelector("input[name='task-name']").value;
   
-     
-// package data as an object
-var taskDataObj = {
-  name: taskNameInput,
-  type: taskTypeInput
-}
+    if (!taskTypeInput || !taskNameInput) {
+      alert("Fill out the task form")
+      return false;
+    }
 
-//send as argument to createTaskEl
-createTaskEl(taskDataObj)
+    formEl.reset()
+     
+      // package data as an object
+      var taskDataObj = {
+        name: taskNameInput,
+        type: taskTypeInput
+      }
+
+      //send as argument to createTaskEl
+      createTaskEl(taskDataObj)
  }
 
  var createTaskEl = function(taskDataObj) {
